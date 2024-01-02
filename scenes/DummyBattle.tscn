@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6xr33g8uov41"]
+
+[ext_resource type="Script" path="res://scripts/Battle.cs" id="1_44y22"]
+
+[node name="DummyBattle" type="Node3D"]
+script = ExtResource("1_44y22")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+
+[node name="DirectionalLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(0.82936, 0, -0.558715, 0, 1, 0, 0.558715, 0, 0.82936, -2.08303, 0, 1.8874)
+omni_range = 16.2763
