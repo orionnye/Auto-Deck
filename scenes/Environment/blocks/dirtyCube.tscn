@@ -1,0 +1,45 @@
+[gd_scene load_steps=9 format=3 uid="uid://b8okar670xt8w"]
+
+[sub_resource type="Gradient" id="Gradient_twnyj"]
+colors = PackedColorArray(0.298039, 0, 0, 1, 0.310617, 0.310617, 0.310617, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_sepkh"]
+frequency = 0.0102
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_568fe"]
+width = 20
+height = 20
+color_ramp = SubResource("Gradient_twnyj")
+noise = SubResource("FastNoiseLite_sepkh")
+
+[sub_resource type="Gradient" id="Gradient_4o2sm"]
+colors = PackedColorArray(0.0823529, 0, 0, 1, 0.411699, 0.20156, 0.0461712, 1)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_jpd2f"]
+noise_type = 0
+frequency = 0.0037
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_tbxa5"]
+width = 20
+height = 20
+in_3d_space = true
+seamless_blend_skirt = 0.541
+as_normal_map = true
+bump_strength = 24.6
+normalize = false
+color_ramp = SubResource("Gradient_4o2sm")
+noise = SubResource("FastNoiseLite_jpd2f")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4tngn"]
+albedo_color = Color(0.682353, 0.407843, 0.337255, 1)
+albedo_texture = SubResource("NoiseTexture2D_568fe")
+roughness_texture = SubResource("NoiseTexture2D_tbxa5")
+roughness_texture_channel = 4
+clearcoat_roughness = 0.34
+uv1_scale = Vector3(3.21, 2.14, 1.07)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4flgs"]
+
+[node name="dirtyCube" type="MeshInstance3D"]
+material_override = SubResource("StandardMaterial3D_4tngn")
+mesh = SubResource("BoxMesh_4flgs")

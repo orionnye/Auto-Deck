@@ -13,6 +13,8 @@ public partial class Deck : Node3D
 	private double time = 0;
 
 	public void castHand(Character caster) {
+		// is caster valid?
+		// GD.Print("caster?:", caster is Character);
 		// cast all cards in hand and then return them to the draw pile
 		hand.useAllCards(caster);
 	}

@@ -53,6 +53,7 @@ public partial class Battle : Node3D
 			maxTime = 0.5,
 			maxEvokeTime = 3
 		};
+		bro.deck.draw.AddChild(Library.cards["godot"].Invoke());
 		Character otherguy = new Character{
 			Position = new Vector3(3, -1, -2),
 			mesh = new MeshInstance3D{

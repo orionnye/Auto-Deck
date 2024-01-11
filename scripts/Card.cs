@@ -47,7 +47,7 @@ public partial class Card : Node3D
 		// Access the root node of the scene tree (global root)
 		Node rootNode = sceneTree.Root;
 		// Access a specific node in the scene tree
-		var battleNode = (Battle)rootNode.GetChildren()[0];
+		var battleNode = (Battle)caster.GetParent().GetParent();
 
 		// GD.Print("NodePosition: ", battleNode.apple);
 		cast(battleNode, caster);

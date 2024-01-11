@@ -46,6 +46,7 @@ public partial class Character : Node3D
 		healthPool.offset = new Vector3(1f, 0f, 0);
 		healthPool.Scale = new Vector3(0.2f, 0.2f, 0.2f);
 		healthPool.addCardType("health", 5);
+		healthPool.addCardType("godot", 1);
 		AddChild(healthPool);
 
 		// Visual
@@ -77,12 +78,12 @@ public partial class Character : Node3D
 	public override void _Process(double delta)
 	{
 		if (healthPool.GetChildCount() <= 0) {
-
 			this._ExitTree();
 			this.GetParent().RemoveChild(this);
 		}
 		if (evokeTime >= maxEvokeTime) {
 			evokeTime = 0;
+			// GD.Print("Boogah");
 			if (deck.hand.GetChildren().Count >= 0) {
 				// GD.Print("emptying hand into draw");
 				deck.castHand(this);
