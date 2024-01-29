@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5dygiq3tpd8p"]
+
+[ext_resource type="PackedScene" uid="uid://k2hogbnsqnqb" path="res://scenes/Environment/Grid.tscn" id="1_ni3da"]
+[ext_resource type="PackedScene" uid="uid://bj5ov5sj1qjjv" path="res://scenes/Events/Battle/Battle.tscn" id="2_ih7pp"]
+
+[node name="Combat" type="Node3D"]
+
+[node name="Grid" parent="." instance=ExtResource("1_ni3da")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95052, 0, 0)
+
+[node name="Battle" parent="." instance=ExtResource("2_ih7pp")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.066277, 0, -1.72283)
+omni_range = 16.9321
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.960508, 0.278254, 0, -0.278254, 0.960508, 0.338632, 3.20211, 4.20493)

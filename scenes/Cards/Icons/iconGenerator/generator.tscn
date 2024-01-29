@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dp6haf7gk6rlx"]
+
+[ext_resource type="Texture2D" uid="uid://4383aqohtvi" path="res://icon.svg" id="1_4g5xc"]
+[ext_resource type="Script" path="res://scenes/Cards/Icons/iconGenerator/generator.cs" id="1_kjjdq"]
+
+[node name="Generator" type="Control"]
+layout_mode = 3
+anchor_right = 0.48
+anchor_bottom = 0.898
+offset_right = 0.039978
+offset_bottom = 0.0959473
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kjjdq")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(300, 500)
+texture = ExtResource("1_4g5xc")

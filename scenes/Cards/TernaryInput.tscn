@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://c45tflsfhbwm2"]
+
+[ext_resource type="Texture2D" uid="uid://dbrbjfudx3epd" path="res://scenes/Cards/Icons/ternaryInput.png" id="1_dmevf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_htu85"]
+albedo_color = Color(1, 0, 0, 1)
+albedo_texture = ExtResource("1_dmevf")
+uv1_scale = Vector3(4.5, 3, 1.5)
+uv1_offset = Vector3(-0.22, 0, 0)
+texture_repeat = false
+
+[sub_resource type="BoxMesh" id="BoxMesh_f5yrv"]
+
+[node name="TernaryInput" type="MeshInstance3D"]
+transform = Transform3D(0.7, 0, 0, 0, 1, 0, 0, 0, 0.05, 1.13249e-05, 0, 0)
+material_override = SubResource("StandardMaterial3D_htu85")
+mesh = SubResource("BoxMesh_f5yrv")

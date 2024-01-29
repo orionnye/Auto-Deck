@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://4383aqohtvi" path="res://icon.svg" id="1_dyic7"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ihkmo"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_we334"]
 albedo_texture = ExtResource("1_dyic7")
 uv1_scale = Vector3(3, 2, 1)
 
@@ -10,5 +10,5 @@ uv1_scale = Vector3(3, 2, 1)
 
 [node name="godot_card" type="MeshInstance3D"]
 transform = Transform3D(0.7, 0, 0, 0, 1, 0, 0, 0, 0.05, 0, 0, 0)
-material_override = SubResource("StandardMaterial3D_ihkmo")
+material_override = SubResource("StandardMaterial3D_we334")
 mesh = SubResource("BoxMesh_f5yrv")

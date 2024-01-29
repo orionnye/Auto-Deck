@@ -5,7 +5,7 @@ using System;
 public partial class Battle : Node3D
 {
 	public int apple = 0;
-
+	public PackedScene characterScene = GD.Load<PackedScene>("res://scenes/Characters/Character.tscn");
 	public Node3D teamA = new Node3D();
 	public Node3D teamB = new Node3D();
 
@@ -54,14 +54,15 @@ public partial class Battle : Node3D
 			maxEvokeTime = 3
 		};
 		bro.deck.draw.AddChild(Library.cards["godot"].Invoke());
-		Character otherguy = new Character{
-			Position = new Vector3(3, -1, -2),
-			mesh = new MeshInstance3D{
-				Mesh = new BoxMesh()
-			},
-			maxTime = 1,
-			maxEvokeTime = 1
-		};
+		
+		Character otherguy = (Character)characterScene.Instantiate();
+		otherguy.Position = new Vector3(3, -1, -2);
+		// 	mesh = new MeshInstance3D{
+		// 		Mesh = new BoxMesh()
+		// 	},
+		// 	maxTime = 1,
+		// 	maxEvokeTime = 1
+		// };
 		otherguy.deck.draw.AddChild(Library.cards["mend"].Invoke());
 		
 		AddChild(teamA);

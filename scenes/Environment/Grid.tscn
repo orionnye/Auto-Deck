@@ -1,9 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://k2hogbnsqnqb"]
+[gd_scene load_steps=2 format=3 uid="uid://k2hogbnsqnqb"]
 
 [ext_resource type="Script" path="res://scenes/Environment/Grid.cs" id="1_be5aa"]
-[ext_resource type="PackedScene" uid="uid://b6xr33g8uov41" path="res://scenes/DummyBattle.tscn" id="2_q1koc"]
 
 [node name="Grid" type="Node3D"]
 script = ExtResource("1_be5aa")
-
-[node name="DummyBattle" parent="." instance=ExtResource("2_q1koc")]
