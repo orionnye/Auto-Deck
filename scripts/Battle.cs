@@ -14,8 +14,6 @@ public partial class Battle : Node3D
 	{
 		// ------------------CREATE ENVIRONMENT CLASS------------------
 		// this should handle a selection of construction types
-
-		// Environment
 		// NoiseChunk noiseWall = new NoiseChunk{
 		// 	Position = new Vector3(0, 2, -5),
 		// 	RotationCap = new Vector3(0, 0, 0),
@@ -29,22 +27,6 @@ public partial class Battle : Node3D
 		// 		Scale = new Vector3(2, 2, 2)
 		// 	}
 		// };
-		// NoiseChunk noiseFloor = new NoiseChunk{
-		// 	Position = new Vector3(0, -3, -1),
-		// 	Rotation = new Vector3(0.1f, 0, 0),
-		// 	RotationCap = new Vector3(0, 0.01f, 0.01f),
-		// 	Dimension = new Vector3(15, 0.1f, 8),
-		// 	Density = 10,
-		// 	MeshPreset = new MeshInstance3D{
-		// 		Mesh = new BoxMesh(),
-		// 		MaterialOverlay = new StandardMaterial3D{
-		// 			AlbedoColor = new Color(0.2f, 0.2f, 0.2f)
-		// 		},
-		// 		Scale = new Vector3(2, 1, 2)
-		// 	}
-		// };
-		// AddChild(noiseWall);
-		// AddChild(noiseFloor);
 
 		// Characters Initialization
 		Character bro = new Character{

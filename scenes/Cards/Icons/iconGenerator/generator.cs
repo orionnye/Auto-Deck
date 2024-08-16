@@ -28,7 +28,7 @@ public partial class generator : Control
 			DrawLine(iStart, iAngle, Colors.Black, lineWidth);
 			// wireAngle
 			DrawLine(iAngle, iAngleEnd, Colors.Black, lineWidth);
-			// // wireEnter
+			// wireEnter
 			DrawLine(iAngleEnd, iEnd, Colors.Black, lineWidth);
 		}
 		// draw exit circuits
@@ -41,7 +41,7 @@ public partial class generator : Control
 			DrawLine(iStart, iAngle, Colors.Black, lineWidth);
 			// wireAngle
 			DrawLine(iAngle, iAngleEnd, Colors.Black, lineWidth);
-			// // wireEnter
+			// wireEnter
 			DrawLine(iAngleEnd, iEnd, Colors.Black, lineWidth);
 		}
 		// draw the mutation box
